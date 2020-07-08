@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Result</title>
+
+</head>
+<body>
+<div th:replace = "~{menu::link}"></div>
+<h3>Uploaded Files:</h3>
+Description: <span th:text="${description}"></span>
+<br/>
+
+<div th:each="file: ${uploadedFiles}">
+    - <span th:text="${file}"></span>
+</div>
+
+</body>
+</html>
